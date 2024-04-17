@@ -5,9 +5,9 @@ public class App {
     public static void main(String[] args) throws Exception {
         int age;
         String name;
-        int archAns = 1;
-        int gameReady = 2;
-        int closeTimer = 1;
+        int archAns = 1; 
+        int gameReady = 1; 
+        int closeTimer = 1; 
         Object[] options = {"Ready", "Not yet", "Maybe Later"};
 
         name = JOptionPane.showInputDialog("Enter Your Name: ");
@@ -24,7 +24,7 @@ public class App {
         JOptionPane.showMessageDialog(null, "Good... The only correct option!");
 
         while(gameReady == 1){
-            JOptionPane.showOptionDialog(null, "Let's play a number guessing game. Are you ready?", "Game", JOptionPane.DEFAULT_OPTION, JOptionPane.WARNING_MESSAGE, null, options, options[0]);
+            gameReady = JOptionPane.showOptionDialog(null, "Let's play a number guessing game. Are you ready?", "Game", JOptionPane.DEFAULT_OPTION, JOptionPane.WARNING_MESSAGE, null, options, options[0]);
             if(gameReady == 1){
                 JOptionPane.showMessageDialog(null, "OK. Waiting for you.");
             }
@@ -36,7 +36,7 @@ public class App {
         }
 
         if(gameReady ==  0){
-            GuessingGame.main();
+            GuessNumber.main();
         }
     }
 }
