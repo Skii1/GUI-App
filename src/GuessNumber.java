@@ -1,6 +1,5 @@
 import javax.swing.JOptionPane;
 import javax.swing.JDesktopPane;
-
 import java.util.Random;
 import java.util.random.*;
 
@@ -9,13 +8,12 @@ public class GuessNumber {
 
         int guess;
         Random random = new Random();
-
         int numberToGuess = random.nextInt(100) + 1;
+        Object[] options = {"Continue"};
 
         guess = Integer.parseInt(JOptionPane.showInputDialog("Pick a number between 1 and 100."));
 
         while(guess != numberToGuess){
-
             if(guess > numberToGuess){
             guess = Integer.parseInt(JOptionPane.showInputDialog("Not Quite. The number is less than " + guess));
             }
@@ -27,7 +25,7 @@ public class GuessNumber {
             }
         }
 
-        JOptionPane.showMessageDialog(null, "Congratulations! You guess the right number, " + guess, "You Win!");
+        JOptionPane.showOptionDialog(null, "Congratulations! You guessed the right number, " + guess, "You Won!", JOptionPane.DEFAULT_OPTION, JOptionPane.PLAIN_MESSAGE, null, options, options[0]);
 
 
 
