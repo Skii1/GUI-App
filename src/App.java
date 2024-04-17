@@ -1,7 +1,6 @@
 import javax.swing.JDesktopPane;
 import javax.swing.JOptionPane;
 import java.util.concurrent.TimeUnit;
-import NumberGuess;
 public class App {
     public static void main(String[] args) throws Exception {
         int age;
@@ -37,7 +36,7 @@ public class App {
         }
 
         if(gameReady ==  0){
-            NumberGuess()
+            GuessingGame.main();
         }
     }
 }
