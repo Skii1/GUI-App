@@ -1,7 +1,5 @@
 import javax.swing.JOptionPane;
 import java.util.Random;
-import java.util.random.*;
-
 public class GuessNumber {
     public static void main() throws Exception {
 
@@ -25,5 +23,6 @@ public class GuessNumber {
                 JOptionPane.DEFAULT_OPTION, JOptionPane.PLAIN_MESSAGE, null, options, options[0]);
 
     }
+
 
 }
